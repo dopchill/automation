@@ -1,0 +1,28 @@
+{
+  "name": "crm-automation",
+  "version": "1.0.0",
+  "description": "CYBERX RMA Automation — web UI control panel + Playwright automation engine",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "automation": "node material-entry/browser-test.js",
+    "automation:dry-run": "node material-entry/browser-test.js --dry-run",
+    "ui:dev": "npm --prefix ui run dev",
+    "ui:build": "npm --prefix ui run build",
+    "ui:lint": "npm --prefix ui run lint",
+    "ui:typecheck": "npm --prefix ui run typecheck",
+    "setup": "npm install && npm --prefix ui install && npm run ui:build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0",
+    "xlsx": "^0.18.5"
+  }
+}
